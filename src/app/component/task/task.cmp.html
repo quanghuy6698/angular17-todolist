@@ -1,0 +1,25 @@
+<div class="task-wrapper" [hidden]="!task.isShow">
+  <div class="task">
+    <!-- Label -->
+    <div class="task__label">
+      <img [src]="getCheckIconUrl()" class="task__check-icon" (click)="onCheckTask()" />
+      <div class="task__name">{{task.name}}</div>
+    </div>
+
+    <!-- Actions -->
+    <div class="task__actions">
+      <div class="task__detail-btn-wrapper">
+        <button class="task__detail-btn" (click)="onClickDetailBtn()">Detail</button>
+      </div>
+
+      <div class="task__remove-btn-wrapper">
+        <button class="task__remove-btn" (click)="onClickRemoveBtn()">Remove</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit form -->
+  <div class="edit-form" [hidden]="!isShowEditForm()">
+    <task-input-form-cmp mode="edit" [task]="task"></task-input-form-cmp>
+  </div>
+</div>

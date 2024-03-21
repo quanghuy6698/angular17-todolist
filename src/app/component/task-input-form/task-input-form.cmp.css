@@ -1,0 +1,98 @@
+/* --- Form --- */
+.new-task-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --- Name --- */
+.name {
+  padding-top: 16px;
+}
+
+.name__input {
+  border: 1px solid #bdbdbd;
+  border-radius: 2px;
+  padding: 8px;
+  width: 100%;
+  outline: none;
+}
+
+/* --- Description --- */
+.descr {
+  padding-top: 16px;
+}
+
+.descr__title {
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+.descr__input {
+  border: 2px solid black;
+  border-radius: 2px;
+  width: 100%;
+  padding: 8px;
+}
+
+/* --- Due Date & Priority --- */
+.due-date-prio {
+  padding-top: 16px;
+}
+
+.due-date-prio__labels {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.due-date-prio__inputs {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.due-date-prio__due-date-label {
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+.due-date-prio__prio-label {
+  font-weight: bold;
+  padding-bottom: 8px;
+  padding-left: 8px;
+}
+
+.due-date-prio__due-date-wrapper {
+  padding-right: 8px;
+}
+
+.due-date-prio__due-date-input {
+  border: 2px solid black;
+  border-radius: 2px;
+  width: 100%;
+  padding: 4px;
+}
+
+.due-date-prio__prio-wrapper {
+  padding-left: 8px;
+}
+
+.due-date-prio__prio-input {
+  border: 2px solid black;
+  border-radius: 2px;
+  width: 100%;
+  padding: 4px;
+}
+
+/* --- Submit --- */
+.submit {
+  padding-top: 32px;
+}
+
+.submit__btn {
+  background-color: #4caf50;
+  color: white;
+  width: 100%;
+  border-radius: 2px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}

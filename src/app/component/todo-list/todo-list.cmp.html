@@ -1,0 +1,31 @@
+<!-- To do list -->
+<div class="wrapper">
+  <div class="todo-lst">
+    <h1 class="todo-lst__title">To Do List</h1>
+    <input type="text" class="todo-lst__search" placeholder="Search..." (keyup)="onSearchTask()" [(ngModel)]="txtSearch" />
+    <ng-container *ngFor="let task of taskLstOnTemplate()">
+      <task-cmp [task]="task.value" (notifyChecked)="onSelectTask($event)"></task-cmp>
+    </ng-container>
+  </div>
+
+  <!-- Bulk action -->
+  <div [hidden]="!isShowBulkAction()">
+    <div class="bulk-action">
+      <!-- Label -->
+      <div class="bulk-action__label">
+        <div class="bulk-action__name">Bulk Action:</div>
+      </div>
+
+      <!-- Actions -->
+      <div class="bulk-action__actions">
+        <div class="bulk-action__done-btn-wrapper">
+          <button class="bulk-action__done-btn">Done</button>
+        </div>
+
+        <div class="bulk-action__remove-btn-wrapper">
+          <button class="bulk-action__remove-btn" (click)="onClickRemoveBtn()">Remove</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

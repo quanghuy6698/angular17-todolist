@@ -1,0 +1,19 @@
+/* --- Form msg --- */
+.form-msg {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.form-msg__content {
+  padding: 8px;
+}
+
+.form-msg__content--success {
+  background-color: turquoise;
+  color: green;
+}
+
+.form-msg__content--error {
+  background-color: pink;
+  color: red;
+}

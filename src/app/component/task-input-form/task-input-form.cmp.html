@@ -1,0 +1,44 @@
+<form [formGroup]="taskInputForm">
+  <div class="new-task-form">
+    <!-- Name input -->
+    <div class="name">
+      <input type="text" class="name__input" [placeholder]="getNameInputPlaceholder()" formControlName="name" />
+    </div>
+
+    <!-- Description input -->
+    <div class="descr">
+      <div class="descr__title">Description</div>
+      <textarea class="descr__input" rows="6" formControlName="description"></textarea>
+    </div>
+
+    <!-- Due date & Priority input -->
+    <div class="due-date-prio">
+      <div class="due-date-prio__labels">
+        <div class="due-date-prio__due-date-label">Due Date</div>
+        <div class="due-date-prio__prio-label">Priority</div>
+      </div>
+
+      <div class="due-date-prio__inputs">
+        <div class="due-date-prio__due-date-wrapper">
+          <input type="date" class="due-date-prio__due-date-input" formControlName="dueDate" />
+        </div>
+
+        <div class="due-date-prio__prio-wrapper">
+          <select class="due-date-prio__prio-input" formControlName="priority">
+            <option value="low">Low</option>
+            <option value="normal">Normal</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit button -->
+    <form-msg-cmp [type]="formMsgType()" [msg]="formMsg()" [hidden]="!isShowFormMsg()"> </form-msg-cmp>
+
+    <!-- Submit button -->
+    <div class="submit">
+      <button class="submit__btn" (click)="onClickSubmitBtn()">{{getSubmitBtnLabel()}}</button>
+    </div>
+  </div>
+</form>

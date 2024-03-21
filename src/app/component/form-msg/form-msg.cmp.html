@@ -1,0 +1,12 @@
+<!-- Form message -->
+<div *ngIf="type == 'success'; then successMsg else errMsg"></div>
+<ng-template #successMsg>
+  <div class="form-msg">
+    <div class="form-msg__content form-msg__content--success">{{msg}}</div>
+  </div>
+</ng-template>
+<ng-template #errMsg>
+  <div class="form-msg">
+    <div class="form-msg__content form-msg__content--error">{{msg}}</div>
+  </div>
+</ng-template>

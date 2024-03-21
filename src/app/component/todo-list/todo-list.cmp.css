@@ -1,0 +1,93 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.todo-lst {
+  padding-top: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+}
+
+.todo-lst__title {
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+.todo-lst__search {
+  border: 1px solid #bdbdbd;
+  border-radius: 2px;
+  width: 100%;
+  padding: 8px;
+  outline: none;
+}
+
+/* --- Bulk action --- */
+.bulk-action {
+  border-top: 1px solid black;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  background-color: #e0e0e0;
+}
+
+/* --- Bulk action label --- */
+.bulk-action__label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.bulk-action__check-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.bulk-action__name {
+  font-size: 24px;
+  padding-left: 8px;
+  font-weight: lighter;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* --- Tasks actions --- */
+.bulk-action__actions {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  flex-grow: 1;
+}
+
+.bulk-action__done-btn-wrapper {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bulk-action__done-btn {
+  padding: 8px;
+  color: white;
+  background-color: #2196f3;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.bulk-action__remove-btn-wrapper {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bulk-action__remove-btn {
+  padding: 8px;
+  color: white;
+  background-color: #d9534f;
+  width: 100%;
+  border-radius: 4px;
+}
